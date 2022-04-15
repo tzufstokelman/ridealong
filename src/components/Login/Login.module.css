@@ -1,6 +1,25 @@
 body {
-  background-color: #bc986a;
+  /* background-color: #bc986a; */
 }
 .Login {
+  display: flex;
+  flex-direction: column;
   background-color: #bc986a;
+  padding: 10%;
+}
+.TextBox {
+  /* margin-top: 30px; */
+  margin-bottom: 30px;
+  /* padding: 30px; */
+}
+.Button {
+  background: linear-gradient(90deg, #fdbb2d 0%, #3a1c71 100%);
+  max-width: 45%;
+  margin-left: 50%;
+  margin-top: 30px;
+}
+.Text {
+  color: #34274c;
+  font-size: large;
+  font-family: "Courier New", Courier, monospace;
 }
