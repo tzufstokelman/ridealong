@@ -1,22 +1,18 @@
-body {
-  /* background-color: #bc986a; */
-}
 .Login {
   display: flex;
   flex-direction: column;
-  background-color: #bc986a;
   padding: 10%;
+  background-color: whitesmoke;
 }
 .TextBox {
-  /* margin-top: 30px; */
-  margin-bottom: 30px;
-  /* padding: 30px; */
+  margin-bottom: 10px;
+  max-width: 300px;
 }
 .Button {
   background: linear-gradient(90deg, #fdbb2d 0%, #3a1c71 100%);
-  max-width: 45%;
+  max-width: 200px;
   margin-left: 50%;
-  margin-top: 30px;
+  /* margin-top: 25px; */
 }
 .Text {
   color: #34274c;
