@@ -9,13 +9,14 @@
   max-width: 300px;
 }
 .Button {
-  background: linear-gradient(90deg, #fdbb2d 0%, #3a1c71 100%);
+  background: rgb(101,157,189);
+  background: linear-gradient(90deg, rgba(101,157,189,0.6643032212885154) 21%, rgba(218,173,134,0.9220063025210083) 79%);
   max-width: 200px;
   margin-left: 50%;
   /* margin-top: 25px; */
 }
 .Text {
-  color: #34274c;
+  color: rgba(255, 255, 255, 0.65);
   font-size: large;
   font-family: "Courier New", Courier, monospace;
 }

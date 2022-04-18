@@ -34,7 +34,7 @@ const Login = () => {
           <div className={classes.Text}>Sign In</div>
         </Button>
         <InputLabel>
-          Not registered yet? <a href="google.com">asd</a>
+          Not registered yet? <a href="google.com">Sign Up</a>
         </InputLabel>
       </form>
     </div>
