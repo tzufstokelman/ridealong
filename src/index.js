@@ -5,4 +5,8 @@ import MainApp from "./components/MainApp/MainApp";
 const container = document.getElementById("root");
 const root = createRoot(container);
 
-root.render(<MainApp />);
+root.render(
+  <>
+    <MainApp />
+  </>
+);
