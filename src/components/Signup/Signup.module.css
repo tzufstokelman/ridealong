@@ -1,0 +1,39 @@
+.Login {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  padding-top: 2%;
+  /* margin-bottom: 12%; */
+  /* align: center; */
+  margin-left: 13%;
+  margin-right: 13%;
+  /* margin-top: 12%; */
+  min-height: 400px;
+  /* min-width: 1000px; */
+  max-width: 100%;
+  max-height: 100%;
+  background-color: whitesmoke;
+}
+.TextBox {
+  margin-bottom: 10px;
+  max-width: 350px;
+}
+.Button {
+  background: rgb(101, 157, 189);
+  background: linear-gradient(
+    90deg,
+    rgba(101, 157, 189, 0.6643032212885154) 21%,
+    rgba(218, 173, 134, 0.9220063025210083) 79%
+  );
+  max-width: 280px;
+  min-width: 230px;
+  /* margin-left: 50%; */
+  margin-top: 25px;
+}
+.Text {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: large;
+  font-family: "Courier New", Courier, monospace;
+}
