@@ -1,4 +1,4 @@
-import react from "react";
+import react, { useState } from "react";
 import classes from "./Signup.module.css";
 import TextField from "@mui/material/TextField/TextField";
 import Button from "@mui/material/Button";
@@ -10,6 +10,49 @@ import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import TransferList from "./ChoicesForm.js";
 const Signup = () => {
+  const [username, setUsername] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
+  const [dateofbirth, setDateOfBirth] = useState(null);
+  const [gender, setGender] = useState(null);
+
+  const handleSignin = (e) => {
+    e.preventDefault();
+    console.log(e.target.value);
+    const userData = {
+      username: username,
+      email: email,
+      password: password,
+      dateofbirth: dateofbirth,
+      gender: gender,
+    };
+    console.log(userData);
+  };
+
+  const handleInputChange = (e) => {
+    const propertyName = e.target.id.split("-")[1];
+    const inputValue = e.target.value;
+    switch (propertyName) {
+      case "username":
+        setUsername(inputValue);
+        break;
+      case "email":
+        setEmail(inputValue);
+        break;
+      case "password":
+        setPassword(inputValue);
+        break;
+      case "dateofbirth":
+        setDateOfBirth(inputValue);
+        break;
+      case "gender":
+        setGender(inputValue);
+        break;
+
+      default:
+        break;
+    }
+  };
   return (
     <div
       style={{
@@ -20,7 +63,7 @@ const Signup = () => {
         display: "flex",
       }}
     >
-      <form className={classes.Login}>
+      <form onSubmit={handleSignin} className={classes.Login}>
         <div style={{ display: "flex", width: "100%" }}>
           <div
             style={{
@@ -32,6 +75,7 @@ const Signup = () => {
           >
             <label>Username</label>
             <TextField
+              onChange={handleInputChange}
               InputProps={{ className: classes.TextBox }}
               id="filled-username-input"
               label="Enter Username"
@@ -41,6 +85,7 @@ const Signup = () => {
             />
             <label>Email</label>
             <TextField
+              onChange={handleInputChange}
               InputProps={{ className: classes.TextBox }}
               id="filled-email-input"
               label="Enter Email"
@@ -50,6 +95,7 @@ const Signup = () => {
             />
             <label>Password</label>
             <TextField
+              onChange={handleInputChange}
               InputProps={{ className: classes.TextBox }}
               id="filled-password-input"
               label="Enter Password"
@@ -59,44 +105,46 @@ const Signup = () => {
             />
             <label>Date of birth</label>
             <TextField
+              onChange={handleInputChange}
               InputProps={{ className: classes.TextBox }}
-              id="filled-age-input"
-              // label="Enter Date of birth"
+              id="filled-dateofbirth-input"
               type="date"
               autoComplete="current-date"
               variant="standard"
             />
             <label>Gender</label>
             <FormControl style={{ minWidth: "300px" }}>
-              {/* <FormLabel id="demo-row-radio-buttons-group-label">Gender</FormLabel> */}
               <RadioGroup
+                id="filled-gender-input"
+                onChange={handleInputChange}
                 row
                 aria-labelledby="demo-row-radio-buttons-group-label"
                 name="row-radio-buttons-group"
               >
                 <FormControlLabel
                   value="female"
-                  control={<Radio />}
+                  control={<Radio id="filled-gender-input1" />}
                   label="Female"
                 />
                 <FormControlLabel
                   value="male"
-                  control={<Radio />}
+                  control={<Radio id="filled-gender-input2" />}
                   label="Male"
                 />
                 <FormControlLabel
                   value="other"
-                  control={<Radio />}
+                  control={<Radio id="filled-gender-input3" />}
                   label="Other"
                 />
               </RadioGroup>
             </FormControl>
             <Button
+              type="submit"
               className={classes.Button}
               variant="contained"
               color="success"
             >
-              <div className={classes.Text}>Sign In</div>
+              <div className={classes.Text}>Sign Up</div>
             </Button>
           </div>
           <TransferList />

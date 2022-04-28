@@ -1,9 +1,19 @@
-import react from "react";
+import react, { useState } from "react";
 import classes from "./Login.module.css";
 import TextField from "@mui/material/TextField/TextField";
 import Button from "@mui/material/Button";
 import InputLabel from "@mui/material/InputLabel";
 const Login = () => {
+  const [username, setUsername] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
+  const [dateofbirth, setDateOfBirth] = useState(null);
+  const [gender, setGender] = useState(null);
+
+  const handleSignin = (e) => {
+    e.preventDefault();
+    console.log();
+  };
   return (
     <div
       style={{
@@ -30,7 +40,12 @@ const Login = () => {
           autoComplete="current-password"
           variant="standard"
         />
-        <Button className={classes.Button} variant="contained" color="success">
+        <Button
+          onSubmit={handleSignin}
+          className={classes.Button}
+          variant="contained"
+          color="success"
+        >
           <div className={classes.Text}>Sign In</div>
         </Button>
         <InputLabel>
