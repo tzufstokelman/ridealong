@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import classes from "./Login.module.css";
 import TextField from "@mui/material/TextField/TextField";
 import Button from "@mui/material/Button";
