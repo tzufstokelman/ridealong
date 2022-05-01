@@ -1,7 +1,7 @@
 const GET_USER_ENDPOINT =
 "http://localhost:8085/iob/users/login/2022b.yarden.dahan/admin@google.com";
 const GET_INSTANCE_ENDPOINT =
-  "http://localhost:8085/iob/instances?userDomain=2022b.yarden.dahan&userEmail=manager@google.com";
+  "http://localhost:8085/iob/instances/search/byName/Yossi?userDomain=2022b.yarden.dahan&userEmail=manager@google.com";
   export const fetchUser = async () => {
     const data = await fetch(GET_USER_ENDPOINT, {
       method: "GET",
@@ -21,8 +21,6 @@ const GET_INSTANCE_ENDPOINT =
       mode: "cors",
       headers: {
         "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Credentials": "true",
-        "Access-Control-Allow-Methods": "GET, DELETE, HEAD, OPTIONS",
         "Accept": "application/json",
       }
       ,
