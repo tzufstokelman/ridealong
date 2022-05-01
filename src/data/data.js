@@ -1,5 +1,5 @@
 const GET_USER_ENDPOINT =
-  "http://localhost:8085/iob/users/login/2022b.yarden.dahan/test@email.com";
+  "http://localhost:8085/iob/users/login/2022b.yarden.dahan/admin@google.com";
 
 export const fetchData = async () => {
   const data = await fetch(GET_USER_ENDPOINT, {
