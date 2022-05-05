@@ -12,3 +12,24 @@ export const fetchData = async () => {
   }).then((rawData) => rawData.json());
   return data;
 };
+
+export const addUser = async (userData) => {
+  const d = JSON.stringify({
+    email: "12@22.com",
+    password: "123123",
+    gender: "female",
+    dateofbirth: "1111-11-11",
+    username: "demo username",
+    role: "player",
+  });
+  console.log(d);
+  await fetch("http://localhost:8085/iob/users", {
+    method: "POST",
+    mode: "cors",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: { d },
+  });
+};

@@ -8,6 +8,7 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
+import { addUser } from "../../data/data";
 import TransferList from "./ChoicesForm.js";
 const Signup = () => {
   const [username, setUsername] = useState(null);
@@ -16,17 +17,19 @@ const Signup = () => {
   const [dateofbirth, setDateOfBirth] = useState(null);
   const [gender, setGender] = useState(null);
 
-  const handleSignin = (e) => {
+  const handleSignin = async (e) => {
     e.preventDefault();
-    console.log(e.target.value);
+    // console.log(e.target.value);
     const userData = {
-      username: username,
       email: email,
       password: password,
-      dateofbirth: dateofbirth,
       gender: gender,
+      dateofbirth: dateofbirth,
+      username: username,
+      role: "player",
     };
-    console.log(userData);
+    await addUser(userData);
+    // console.log(userData);
   };
 
   const handleInputChange = (e) => {
@@ -48,7 +51,6 @@ const Signup = () => {
       case "gender":
         setGender(inputValue);
         break;
-
       default:
         break;
     }
