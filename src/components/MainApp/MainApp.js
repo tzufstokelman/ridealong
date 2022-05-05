@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { fetchData } from "../../data/data";
+import { fetchData, fetchUser,fetchInstance } from "../../data/data";
 import Nopage from "../Nopage/Nopage";
 import Login from "../Login/Login";
 import Home from "../Home/Home";
@@ -10,7 +10,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MyProfile from "../MyProfile/MyProfile";
 const MainApp = () => {
   useEffect(() => {
-    fetchData().then((data) => console.log(data));
+    fetchUser().then((data) => console.log(data));
+    fetchInstance().then((data) => console.log(data));
   }, []);
 
   return (

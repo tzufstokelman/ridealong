@@ -1,5 +1,5 @@
 import { NavLink, Router } from "react-router-dom";
-import react from "react";
+import React from "react";
 import classes from "./Toolbar.module.css";
 import MyNavlink from "../MyNavlink/MyNavlink";
 const MyToolbar = () => {
